@@ -10,7 +10,7 @@ endif
 all: $(TARGETS) Makefile
 clean:
 	rm -f $(TARGETS)
-	rm -f *.o *.~
+	rm -f *.o *~
 
 ass1: ass1.o
 ass2: ass2.o

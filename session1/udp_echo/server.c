@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 	while (1) {
 		salen = sizeof(sa);
 
-		msglen = recvfrom(fd, &line, sizeof(line), 0, (struct sockaddr *) &sa, &salen)
+		msglen = recvfrom(fd, &line, sizeof(line), 0, (struct sockaddr *) &sa, &salen);
 		if (msglen == -1)
 			handle_error("Failed to recv");
 

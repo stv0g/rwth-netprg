@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 {
 	int fd;
 	char *lineptr = NULL;
-	ssize_t linelen = 0;
+	size_t linelen = 0;
 
 	struct sockaddr_in sa = { .sin_family = AF_INET };
 

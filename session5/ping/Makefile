@@ -1,7 +1,7 @@
 TARGETS = ping
 
 CC = gcc
-CFLAGS = -g -lrt
+CFLAGS = -g -lrt -std=c99
 
 all: $(TARGETS) Makefile
 clean:

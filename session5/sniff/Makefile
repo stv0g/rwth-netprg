@@ -1,7 +1,7 @@
 TARGETS = sniff
 
 CC = gcc
-CFLAGS = -g
+CFLAGS = -g -std=c99
 
 all: $(TARGETS) Makefile
 clean:

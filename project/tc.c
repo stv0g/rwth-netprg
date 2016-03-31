@@ -11,8 +11,6 @@
 #include <netlink/route/qdisc/netem.h>
 #include <netlink/route/qdisc/prio.h>
 #include <netlink/route/cls/fw.h>
-#include <netlink/fib_lookup/request.h>
-#include <netlink/fib_lookup/lookup.h>
 
 #include <linux/if_ether.h>
 
@@ -44,7 +42,7 @@ int tc_prio(struct nl_sock *sock, struct rtnl_link *link, struct rtnl_tc **tc)
 	rtnl_tc_set_kind(TC_CAST(q), "prio"); 
 
 	rtnl_qdisc_prio_set_bands(q, 3+1);
-	rtnl_qdisc_prio_set_priomap(q, map, 7);
+	rtnl_qdisc_prio_set_priomap(q, map, sizeof(map));
 
 	int ret = rtnl_qdisc_add(sock, q, NLM_F_CREATE);
 
